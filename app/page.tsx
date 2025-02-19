@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/hero-section";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -219,6 +220,48 @@ export default function Home() {
       {/* Hero Banner */}
       <section className="relative overflow-hidden bg-gradient-to-r from-pink-400 via-pink-300 to-pink-200">
         <div className="container mx-auto relative z-10 py-8 w-full">
+          <div className="flex flex-col md:flex-row items-center justify-between px-5">
+            <div className="flex-1 mb-8 md:mb-0">
+              <h1 className="mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                jaw drop at the
+                <span className="block mb-3 bg-gradient-to-r from-yellow-300 to-yellow-100 bg-clip-text text-transparent">
+                  PRICE DROP 😱
+                </span>
+              </h1>
+              <div className="relative">
+                <span className="absolute left-[55%] -top-40 rounded-full bg-green-400 px-4 sm:px-6 py-1 sm:py-2 text-xs sm:text-sm font-bold text-white">
+                  CULT FAVES
+                </span>
+              </div>
+            </div>
+            <div className="relative flex-1 w-full md:w-auto">
+              <div className="relative h-[200px] sm:h-[300px] md:h-[400px]">
+                <Image
+                  src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80"
+                  alt="Featured products"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div className="absolute right-0 top-0 h-full w-1/2 hidden md:block">
+                <div className="relative h-full">
+                  <Image
+                    src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&q=80"
+                    alt="Model"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-[url('/sparkles.png')] opacity-20"></div>
+      </section>
+      {/* <section className="relative overflow-hidden bg-gradient-to-r from-pink-400 via-pink-300 to-pink-200">
+        <div className="container mx-auto relative z-10 py-8 w-full">
           <div className="flex items-center justify-between px-5">
             <div className="flex-1">
               <h1 className="mb-2 text-4xl font-bold text-white md:text-6xl leading-6">
@@ -258,50 +301,6 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute inset-0 bg-[url('/sparkles.png')] opacity-20"></div>
-      </section>
-      {/* <section className="relative overflow-hidden bg-gradient-to-r from-pink-400 via-pink-300 to-pink-200">
-        <div className="absolute inset-0 bg-[url('/sparkles.png')] opacity-20"></div>
-
-        <div className="container mx-auto relative z-10 py-8 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-            <div className="flex-1 text-center md:text-left">
-              <h1 className="mb-2 text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
-                jaw drop at the
-                <span className="block mb-3 bg-gradient-to-r from-yellow-300 to-yellow-100 bg-clip-text text-transparent">
-                  PRICE DROP 😱
-                </span>
-              </h1>
-              <div className="relative">
-                <span className="inline-block sm:absolute sm:left-[55%] sm:-top-40 rounded-full bg-green-400 px-4 py-2 text-sm font-bold text-white">
-                  CULT FAVES
-                </span>
-              </div>
-            </div>
-
-            <div className="flex-1 w-full md:w-auto">
-              <div className="relative h-[200px] sm:h-[300px] md:h-[400px]">
-                <Image
-                  src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80"
-                  alt="Featured products"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-              <div className="absolute right-0 top-0 h-full w-1/2 hidden sm:block">
-                <div className="relative h-full">
-                  <Image
-                    src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&q=80"
-                    alt="Model"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section> */}
 
       {/* Featured Products Grid */}
@@ -449,7 +448,7 @@ export default function Home() {
           {/* Heading and Subheading */}
           <div className="mb-8 text-center">
             <h2 className="mb-2 text-xl sm:text-2xl font-bold text-gray-800">
-              NYKAA LUXE
+              GLOW LUXE
             </h2>
             <p className="text-xs sm:text-sm text-gray-600">
               THE BEST OF LUXURY
@@ -529,7 +528,7 @@ export default function Home() {
       <section className="bg-gradient-to-r from-pink-100 via-pink-300 to-pink-500 py-8">
         <div className="mx-auto px-2 sm:px-2 md:px-4  flex flex-col items-center justify-center w-full ">
           <h2 className="mb-4 sm:mb-6 text-center text-xl font-semibold text-gray-800">
-            New At Store
+            New At GLOW
           </h2>
           <p className="mb-6 sm:mb-8 text-center text-sm text-gray-600">
             Latest Beauty Arrivals You'll Want To Own
@@ -546,6 +545,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* footer section */}
+      <Footer />
     </main>
   );
 }
