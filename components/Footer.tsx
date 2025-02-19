@@ -88,7 +88,7 @@ export function Footer() {
             <div className="mt-2 md:mt-0 md:ml-4 flex space-x-2">
               <Link href="#" className="h-8 w-24">
                 <Image
-                  src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80"
+                  src="img-1.jpg"
                   alt="Get it on Google Play"
                   width={96}
                   height={32}
@@ -97,7 +97,16 @@ export function Footer() {
               </Link>
               <Link href="#" className="h-8 w-24">
                 <Image
-                  src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&q=80"
+                  src="img-34.jpg"
+                  alt="Download on the App Store"
+                  width={96}
+                  height={32}
+                  className="h-full w-full object-contain"
+                />
+              </Link>
+              <Link href="#" className="h-8 w-24">
+                <Image
+                  src="img-13.jpg"
                   alt="Download on the App Store"
                   width={96}
                   height={32}

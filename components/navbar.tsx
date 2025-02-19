@@ -4,6 +4,8 @@ import * as React from "react";
 import Link from "next/link";
 import { Search, ShoppingBag, User, Heart, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MobileMenu } from "./Mobile-menu";
+import { CartDropdown } from "./Cart-dropdown";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -62,8 +64,22 @@ const categories = [
 ];
 
 export function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black bg-opacity-50"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile Menu */}
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
       {/* Top Banner */}
       <div className="bg-pink-600 py-2 text-center text-sm text-white">
         <span>
@@ -76,7 +92,12 @@ export function Navbar() {
         <div className="mx-auto px-2 md:px-4">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="md:hidden"
+                onClick={() => setIsMobileMenuOpen(true)}
+              >
                 <Menu className="h-6 w-6" />
               </Button>
               <Link href="/" className="flex items-center space-x-2">
@@ -102,7 +123,7 @@ export function Navbar() {
                 <Heart className="h-5 w-5" />
               </Button>
               <Button variant="ghost" size="icon">
-                <ShoppingBag className="h-5 w-5" />
+                <CartDropdown />
               </Button>
               <Button
                 variant="default"

@@ -62,22 +62,19 @@ const focusProducts = [
     title: "Runway ready slick",
     subtitle: "Upto 10% Off",
     description: "Zero Cast Waxstick",
-    image:
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80",
+    image: "/img-42.jpg",
   },
   {
     title: "SUNKISSED HIGHLIGHTER + BLUSH",
     subtitle: "New Launch",
     description: "12H Golden Hour Glow",
-    image:
-      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&q=80",
+    image: "/img-36.jpg",
   },
   {
     title: "Selfcare Sheet Masks",
     subtitle: "Buy 5 Get 5",
     description: "On Sheet Mask",
-    image:
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80",
+    image: "/img-43.jpg",
   },
 ];
 
@@ -316,7 +313,7 @@ export default function Home() {
                     fill
                     className="object-cover transition-transform group-hover:scale-105"
                   />
-                  <div className="absolute left-2 top-2 rotate-[-35deg] ">
+                  <div className="absolute -left-2 top-2 rotate-[-30deg] ">
                     <span className="inline-block rounded-full bg-yellow-400 px-4 py-1 text-xs font-bold text-white">
                       {product.tag}
                     </span>
@@ -443,7 +440,7 @@ export default function Home() {
       </section>
 
       {/* Luxury Brands */}
-      <section className="border-t border-gray-200 px-4 sm:px-6 lg:px-8 py-8">
+      <section className="border-t border-gray-200 bg-gradient-to-r from-green-200  to-pink-700 px-4 sm:px-6 lg:px-8 py-8">
         <div className="mx-auto max-w-7xl">
           {/* Heading and Subheading */}
           <div className="mb-8 text-center">
@@ -476,7 +473,7 @@ export default function Home() {
             <Card className="overflow-hidden">
               <div className="relative aspect-square">
                 <Image
-                  src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80"
+                  src="/img-33.jpg"
                   alt="OLAPLEX"
                   fill
                   className="object-cover"
@@ -492,7 +489,7 @@ export default function Home() {
             <Card className="overflow-hidden">
               <div className="relative aspect-square">
                 <Image
-                  src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80"
+                  src="/img-35.jpg"
                   alt="FRAGRANCE"
                   fill
                   className="object-cover"
@@ -508,7 +505,7 @@ export default function Home() {
             <Card className="overflow-hidden">
               <div className="relative aspect-square">
                 <Image
-                  src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&q=80"
+                  src="/img-40.jpg"
                   alt="FOREST ESSENTIALS"
                   fill
                   className="object-cover"
